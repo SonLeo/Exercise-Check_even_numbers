@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check even numbers</title>
+</head>
+<body>
+    <label for="numbers">
+        Input number:
+        <input type="number" name="numbers" id="numbers">
+    </label>
+    <button type="button" onclick="checkEvenNumber()">Check</button>
+
+    <div style="padding: 10px;">Kết quả: <span id="result"></span></div>
+
+    <script>
+        
+        function checkEvenNumber() {
+            let inputNumber = document.getElementById("numbers").value;
+            
+            if(inputNumber%2 == 0) {
+                document.getElementById("result").innerHTML = inputNumber + " là số chẵn"
+            } else {
+                document.getElementById("result").innerHTML = inputNumber + " là số lẻ"
+            }
+        }
+    </script>
+</body>
+</html>
